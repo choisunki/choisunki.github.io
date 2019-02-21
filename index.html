@@ -67,6 +67,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo-cli-path" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/21/hexo-cli-path/" class="article-date">
+  <time datetime="2019-02-21T07:52:55.000Z" itemprop="datePublished">2019-02-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/21/hexo-cli-path/">command not found hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>어찌어찌 <code>hexo</code> 를 설치해보았다.</p>
+<h3 id="hexo-설치"><a href="#hexo-설치" class="headerlink" title="hexo 설치"></a>hexo 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="blog-init"><a href="#blog-init" class="headerlink" title="blog init"></a>blog init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure></p>
+<p><code>hexo</code> 를 찾을수 없다고 나온다.<br><code>.bash_profile</code> 에 환경변수 설정을 해보아도 마찬가지.</p>
+<h3 id="zshrc"><a href="#zshrc" class="headerlink" title=".zshrc"></a>.zshrc</h3><p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure></p>
+<p>그래서 아래와 같이 해봤다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure></p>
+<p>오, 잘된다.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsee98s200011p9yh9tl9uxl" class="article-share-link">공유</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iterm-hexo-notfound/">iterm, hexo, notfound</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-samsung-internet" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/02/21/samsung-internet/" class="article-date">
@@ -111,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjsee67qa0001yl9y3vi3lhk2" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjsee98s400021p9ymq0pwptn" class="article-share-link">공유</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/browser-issue-android-galaxy-fullscreen-mobileweb/">browser, issue, android, galaxy, fullscreen, mobileweb</a></li></ul>
@@ -158,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hello-world/" data-id="cjsee67q60000yl9ywuo9ehd8" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hello-world/" data-id="cjsee98ry00001p9ysm0pdrwj" class="article-share-link">공유</a>
       
       
     </footer>
@@ -181,7 +227,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">태그</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/browser-issue-android-galaxy-fullscreen-mobileweb/">browser, issue, android, galaxy, fullscreen, mobileweb</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/browser-issue-android-galaxy-fullscreen-mobileweb/">browser, issue, android, galaxy, fullscreen, mobileweb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm-hexo-notfound/">iterm, hexo, notfound</a></li></ul>
     </div>
   </div>
 
@@ -191,7 +237,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">태그 클라우드</h3>
     <div class="widget tagcloud">
-      <a href="/tags/browser-issue-android-galaxy-fullscreen-mobileweb/" style="font-size: 10px;">browser, issue, android, galaxy, fullscreen, mobileweb</a>
+      <a href="/tags/browser-issue-android-galaxy-fullscreen-mobileweb/" style="font-size: 10px;">browser, issue, android, galaxy, fullscreen, mobileweb</a> <a href="/tags/iterm-hexo-notfound/" style="font-size: 10px;">iterm, hexo, notfound</a>
     </div>
   </div>
 
@@ -211,6 +257,10 @@
     <h3 class="widget-title">최근 포스트</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/02/21/hexo-cli-path/">command not found hexo</a>
+          </li>
         
           <li>
             <a href="/2019/02/21/samsung-internet/">samsung-internet</a>
