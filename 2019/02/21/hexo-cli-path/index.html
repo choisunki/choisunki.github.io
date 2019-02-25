@@ -97,24 +97,24 @@
       
         <p>어찌어찌 <code>hexo</code> 를 설치해보았다.</p>
 <h3>hexo 설치</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></p>
 <h3>blog init</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure>
-<p><code>hexo</code> 를 찾을수 없다고 나온다.<br>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></p>
+<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure></p>
+<p><code>hexo</code> 를 찾을수 없다고 나온다.
 <code>.bash_profile</code> 에 환경변수 설정을 해보아도 마찬가지.</p>
 <h3>.zshrc</h3>
-<p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure>
-<p>그래서 아래와 같이 해봤다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure>
+<p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure></p>
+<p>그래서 아래와 같이 해봤다.
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure></p>
 <p>오, 잘된다.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsk76piv000ggl9ykewdpvuf" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsk7eazx000bmn9y1y5pdi62" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/hexo-cli-path/#disqus_thread" class="article-comment-link">댓글</a>
       
