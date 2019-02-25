@@ -5,20 +5,17 @@
   
 
   
-  <title>command not found hexo | Sunki&#39;s Web Publishing</title>
+  <title>hexo.md | Sunki&#39;s Web Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
-<meta name="keywords" content="hexo,notfound">
+  <meta name="keywords" content="html,css,js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="command not found hexo">
-<meta property="og:url" content="https://choisunki.github.io/2019/02/21/hexo-cli-path/index.html">
+<meta property="og:title" content="hexo.md">
+<meta property="og:url" content="https://choisunki.github.io/2019/02/25/hexo-md/index.html">
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
-<meta property="og:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-02-22T01:01:36.058Z">
+<meta property="og:updated_time" content="2019-02-25T01:17:40.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="command not found hexo">
-<meta name="twitter:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
+<meta name="twitter:title" content="hexo.md">
   
     <link rel="alternate" href="/atom.xml" title="Sunki&#39;s Web Publishing" type="application/atom+xml">
   
@@ -69,16 +66,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo-cli-path" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/21/hexo-cli-path/" class="article-date">
-  <time datetime="2019-02-21T07:52:55.000Z" itemprop="datePublished">2019-02-21</time>
+    <a href="/2019/02/25/hexo-md/" class="article-date">
+  <time datetime="2019-02-25T01:17:40.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -87,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      command not found hexo
+      hexo.md
     </h1>
   
 
@@ -95,44 +88,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>어찌어찌 <code>hexo</code> 를 설치해보았다.</p>
-<h3 id="hexo-설치"><a href="#hexo-설치" class="headerlink" title="hexo 설치"></a>hexo 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h3 id="blog-init"><a href="#blog-init" class="headerlink" title="blog init"></a>blog init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure></p>
-<p><code>hexo</code> 를 찾을수 없다고 나온다.<br><code>.bash_profile</code> 에 환경변수 설정을 해보아도 마찬가지.</p>
-<h3 id="zshrc"><a href="#zshrc" class="headerlink" title=".zshrc"></a>.zshrc</h3><p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure></p>
-<p>그래서 아래와 같이 해봤다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure></p>
-<p>오, 잘된다.</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsjnt4gx0003u69y4zbcr7f7" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/hexo-md/" data-id="cjsjnt4h20006u69yncnnn5tg" class="article-share-link">공유</a>
       
-        <a href="https://choisunki.github.io/2019/02/21/hexo-cli-path/#disqus_thread" class="article-comment-link">댓글</a>
+        <a href="https://choisunki.github.io/2019/02/25/hexo-md/#disqus_thread" class="article-comment-link">댓글</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notfound/">notfound</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/02/25/timeago/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">최신</strong>
-      <div class="article-nav-title">
-        
-          timeage.js 사용법
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/02/21/samsung-internet/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/25/timeago/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">이전</strong>
-      <div class="article-nav-title">samsung-internet</div>
+      <div class="article-nav-title">timeage.js 사용법</div>
     </a>
   
 </nav>
@@ -244,7 +218,7 @@
 <script>
   var disqus_shortname = 'choisunki';
   
-  var disqus_url = 'https://choisunki.github.io/2019/02/21/hexo-cli-path/';
+  var disqus_url = 'https://choisunki.github.io/2019/02/25/hexo-md/';
   
   (function(){
     var dsq = document.createElement('script');
