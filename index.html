@@ -116,12 +116,18 @@
 <p>그리고, 만든 <code>json</code>형식의 아이를 <code>$scope.stores</code>안에 <code>data</code> 를 만들고 할당해줬다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">$scope.stores = &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 시도 모델</span></span><br><span class="line">  sidoModel: <span class="literal">null</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 매장 모델</span></span><br><span class="line">  store: &#123;</span><br><span class="line">    code: <span class="literal">null</span>,  <span class="comment">// 매장 코드</span></span><br><span class="line">    name: <span class="literal">null</span>   <span class="comment">// 매장 이름</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 매장(items) 데이터</span></span><br><span class="line">  sdata: [],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 지역 및 매장 정보</span></span><br><span class="line">  data: storeData,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 지역 변경</span></span><br><span class="line">  change: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> local;</span><br><span class="line"></span><br><span class="line">    $scope.stores.sdata = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( $scope.stores.data[$scope.stores.sidoModel] !== <span class="literal">undefined</span> ) &#123;</span><br><span class="line"></span><br><span class="line">      $scope.stores.sdata = $scope.stores.data[$scope.stores.sidoModel].items;</span><br><span class="line">      local = $scope.stores.data[ $scope.stores.sidoModel ].city;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 매장명 가져오기</span></span><br><span class="line">  getName: <span class="function"><span class="keyword">function</span>(<span class="params"> store </span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> storeCode = $scope.stores.store.code,</span><br><span class="line">        storeName = $.grep( $scope.stores.sdata, <span class="function"><span class="keyword">function</span>(<span class="params"> store </span>) </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> store.code === storeCode;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( storeName.length &gt; <span class="number">0</span> ) &#123;</span><br><span class="line">       storeName = storeName[<span class="number">0</span>].name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $scope.stores.store.name = storeName;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3>결과 미리보기</h3>
-<iframe id="cp_embed_xBKjZE" src="//codepen.io/njean|anonymous|anon/embed/xBKjZE?height=[265&theme-id=dark&slug-hash=xBKjZE&default-tab=[result" scrolling="no" frameborder="no" height="[265" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: [100%]]]; overflow: hidden;"></iframe>
+<iframe id="cp_embed_xBKjZE" src="//codepen.io/njean|anonymous|anon/embed/xBKjZE?height=365&theme-id=dark&slug-hash=xBKjZE&default-tab=result" scrolling="no" frameborder="no" height="365" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="result" data-user="njean" data-slug-hash="xBKjZE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="select local">
+  <span>See the Pen <a href="https://codepen.io/njean/pen/xBKjZE/" target="_blank" rel="noopener">
+  select local</a> by Choi Sunki (<a href="https://codepen.io/njean" target="_blank" rel="noopener">@njean</a>)
+  on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/select-get-store/" data-id="cjsk5f3od0005sq9y1mlz60ha" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/select-get-store/" data-id="cjsk5irio0005x49yaobez0jf" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/select-get-store/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -180,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/timeago/" data-id="cjsk5f3oj000dsq9ynytan54p" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/timeago/" data-id="cjsk5iris000dx49yt0jk5hgm" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/timeago/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -239,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsk5f3oh000asq9yk5cqg7yd" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsk5iriq000ax49yqg7ggwcr" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/hexo-cli-path/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -313,7 +319,7 @@ IOS에서는 안되었지만, 안드로이드 진영에서는 가능했기에, �
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjsk5f3oi000bsq9yosfe88ol" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjsk5irir000bx49y4qga1bb1" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/samsung-internet/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -367,7 +373,7 @@ IOS에서는 안되었지만, 안드로이드 진영에서는 가능했기에, �
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hello-world/" data-id="cjsk5f3oe0006sq9y1godzdi1" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hello-world/" data-id="cjsk5irio0006x49y6v5fbht6" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/hello-world/#disqus_thread" class="article-comment-link">댓글</a>
       
