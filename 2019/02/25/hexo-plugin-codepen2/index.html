@@ -7,18 +7,18 @@
   
   <title>hexo-plugin-codepen2 | Sunki&#39;s Web Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="codepen 으로 작성한게 있는데, 이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, ¶설치(install) 1npm install hexo-codepen-v2 --save ¶사용법(Usage) 1&amp;#123;% codepen slugHash default_tabs height wid">
+  <meta name="description" content="codepen 으로 작성한게 있는데,이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, 설치(install)1npm install hexo-codepen-v2 --save 사용법(Usage)1&amp;#123;% codepen slugHash default_tabs height width us">
 <meta name="keywords" content="hexo,plugins,codepen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-plugin-codepen2">
 <meta property="og:url" content="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/index.html">
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
-<meta property="og:description" content="codepen 으로 작성한게 있는데, 이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, ¶설치(install) 1npm install hexo-codepen-v2 --save ¶사용법(Usage) 1&amp;#123;% codepen slugHash default_tabs height wid">
+<meta property="og:description" content="codepen 으로 작성한게 있는데,이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, 설치(install)1npm install hexo-codepen-v2 --save 사용법(Usage)1&amp;#123;% codepen slugHash default_tabs height width us">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-02-25T10:26:46.753Z">
+<meta property="og:updated_time" content="2019-02-25T11:16:02.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-plugin-codepen2">
-<meta name="twitter:description" content="codepen 으로 작성한게 있는데, 이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, ¶설치(install) 1npm install hexo-codepen-v2 --save ¶사용법(Usage) 1&amp;#123;% codepen slugHash default_tabs height wid">
+<meta name="twitter:description" content="codepen 으로 작성한게 있는데,이걸 hexo 에 올려주는(?) 플러그인(hexo-codepen-v2)이 있어 설치를 해보았다. blog 폴더로 이동해서, 설치(install)1npm install hexo-codepen-v2 --save 사용법(Usage)1&amp;#123;% codepen slugHash default_tabs height width us">
   
     <link rel="alternate" href="/atom.xml" title="Sunki&#39;s Web Publishing" type="application/atom+xml">
   
@@ -95,31 +95,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>codepen 으로 작성한게 있는데,<br>
-이걸 hexo 에 올려주는(?) 플러그인(<a href="https://www.npmjs.com/package/hexo-codepen-v2" target="_blank" rel="noopener">hexo-codepen-v2</a>)이 있어 설치를 해보았다.</p>
+        <p>codepen 으로 작성한게 있는데,<br>이걸 hexo 에 올려주는(?) 플러그인(<a href="https://www.npmjs.com/package/hexo-codepen-v2" target="_blank" rel="noopener">hexo-codepen-v2</a>)이 있어 설치를 해보았다.</p>
 <p>blog 폴더로 이동해서,</p>
-<h2 id="설치-install"><a class="header-anchor" href="#설치-install">¶</a>설치(install)</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-codepen-v2 --save</span><br></pre></td></tr></table></figure>
-<h2 id="사용법-usage"><a class="header-anchor" href="#사용법-usage">¶</a>사용법(Usage)</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codepen slugHash default_tabs height width userId|anonymous|anon theme %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="codepen-삽입-코드에서-인수를-얻는-방법"><a class="header-anchor" href="#codepen-삽입-코드에서-인수를-얻는-방법">¶</a>CodePen 삽입 코드에서 인수를 얻는 방법</h3>
-<h4 id="이-코드는-codepen에서-생성된-것"><a class="header-anchor" href="#이-코드는-codepen에서-생성된-것">¶</a>이 코드는 <code>CodePen</code>에서 생성된 것.</h4>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"codepen"</span> <span class="attr">data-height</span>=<span class="string">"265"</span> <span class="attr">data-theme-id</span>=<span class="string">"0"</span> <span class="attr">data-default-tab</span>=<span class="string">"result"</span> <span class="attr">data-user</span>=<span class="string">"njean"</span> <span class="attr">data-slug-hash</span>=<span class="string">"xBKjZE"</span> <span class="attr">style</span>=<span class="string">"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"</span> <span class="attr">data-pen-title</span>=<span class="string">"select local"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>See the Pen <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io/njean/pen/xBKjZE/"</span>&gt;</span></span><br><span class="line">  select local<span class="tag">&lt;/<span class="name">a</span>&gt;</span> by Choi Sunki (<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io/njean"</span>&gt;</span>@njean<span class="tag">&lt;/<span class="name">a</span>&gt;</span>)</span><br><span class="line">  on <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io"</span>&gt;</span>CodePen<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://static.codepen.io/assets/embed/ei.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>| 구분 	| 값 	|<br>
-|--------------	|--------------------------------------------------------------	|<br>
-| userId 	| njean 	|<br>
-| slugHash 	| xBKjZE 	|<br>
-| theme 	| 0 	|<br>
-| default_tabs 	| result 	|<br>
-| height 	| 265 	|<br>
-| width 	| 이 값은 블로그 테마에 따라 조정되어야 하며 기본적으로 <code>100%</code> 	|</p>
+<h2 id="설치-install"><a href="#설치-install" class="headerlink" title="설치(install)"></a>설치(install)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-codepen-v2 --save</span><br></pre></td></tr></table></figure>
+<h2 id="사용법-Usage"><a href="#사용법-Usage" class="headerlink" title="사용법(Usage)"></a>사용법(Usage)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codepen slugHash default_tabs height width userId|anonymous|anon theme %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CodePen-삽입-코드에서-인수를-얻는-방법"><a href="#CodePen-삽입-코드에서-인수를-얻는-방법" class="headerlink" title="CodePen 삽입 코드에서 인수를 얻는 방법"></a>CodePen 삽입 코드에서 인수를 얻는 방법</h3><h4 id="이-코드는-CodePen에서-생성된-것"><a href="#이-코드는-CodePen에서-생성된-것" class="headerlink" title="이 코드는 CodePen에서 생성된 것."></a>이 코드는 <code>CodePen</code>에서 생성된 것.</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"codepen"</span> <span class="attr">data-height</span>=<span class="string">"265"</span> <span class="attr">data-theme-id</span>=<span class="string">"0"</span> <span class="attr">data-default-tab</span>=<span class="string">"result"</span> <span class="attr">data-user</span>=<span class="string">"njean"</span> <span class="attr">data-slug-hash</span>=<span class="string">"xBKjZE"</span> <span class="attr">style</span>=<span class="string">"height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"</span> <span class="attr">data-pen-title</span>=<span class="string">"select local"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>See the Pen <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io/njean/pen/xBKjZE/"</span>&gt;</span></span><br><span class="line">  select local<span class="tag">&lt;/<span class="name">a</span>&gt;</span> by Choi Sunki (<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io/njean"</span>&gt;</span>@njean<span class="tag">&lt;/<span class="name">a</span>&gt;</span>)</span><br><span class="line">  on <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://codepen.io"</span>&gt;</span>CodePen<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://static.codepen.io/assets/embed/ei.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>njean</td>
+</tr>
+<tr>
+<td>slugHash</td>
+<td>xBKjZE</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>0</td>
+</tr>
+<tr>
+<td>default_tabs</td>
+<td>result</td>
+</tr>
+<tr>
+<td>height</td>
+<td>265</td>
+</tr>
+<tr>
+<td>width</td>
+<td>이 값은 블로그 테마에 따라 조정되어야 하며 기본적으로 <code>100%</code></td>
+</tr>
+</tbody>
+</table>
 <p><code>slugHash</code>를 제외한이 설정은 모두 codepen 속성의 <code>_config.yml</code>에서 설정할 수 있다.</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">codepen:</span></span><br><span class="line"><span class="attr">  userId:</span> <span class="string">"njean"</span></span><br><span class="line"><span class="attr">  theme:</span> <span class="string">"0"</span></span><br><span class="line"><span class="attr">  default_tabs:</span> <span class="string">"js,result"</span></span><br><span class="line"><span class="attr">  height:</span> <span class="number">500</span></span><br><span class="line"><span class="attr">  width:</span> <span class="string">"100%"</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/" data-id="cjsk8ckvu0007e69yac807i9v" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/" data-id="cjsk99nrh000a2e9yq2804574" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -131,6 +152,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/02/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
   
   
     <a href="/2019/02/25/select-get-store/" id="article-nav-older" class="article-nav-link-wrap">
@@ -199,6 +229,10 @@
       <ul>
         
           <li>
+            <a href="/2019/02/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
             <a href="/2019/02/25/hexo-plugin-codepen2/">hexo-plugin-codepen2</a>
           </li>
         
@@ -212,10 +246,6 @@
         
           <li>
             <a href="/2019/02/21/hexo-cli-path/">command not found hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/21/samsung-internet/">samsung-internet</a>
           </li>
         
       </ul>
