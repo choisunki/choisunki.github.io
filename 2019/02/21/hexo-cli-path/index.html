@@ -7,18 +7,18 @@
   
   <title>command not found hexo | Sunki&#39;s Web Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
+  <meta name="description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치 1npm install hexo-cli -g blog init 1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다. 1command not found: hexo hexo 를 찾을수 없다고 나온다. .bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc">
 <meta name="keywords" content="hexo,notfound">
 <meta property="og:type" content="article">
 <meta property="og:title" content="command not found hexo">
 <meta property="og:url" content="https://choisunki.github.io/2019/02/21/hexo-cli-path/index.html">
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
-<meta property="og:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
+<meta property="og:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치 1npm install hexo-cli -g blog init 1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다. 1command not found: hexo hexo 를 찾을수 없다고 나온다. .bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc">
 <meta property="og:locale" content="ko">
 <meta property="og:updated_time" content="2019-02-22T01:01:36.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="command not found hexo">
-<meta name="twitter:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치1npm install hexo-cli -g blog init1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.1command not found: hexo hexo 를 찾을수 없다고 나온다..bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc.zshr">
+<meta name="twitter:description" content="어찌어찌 hexo 를 설치해보았다. hexo 설치 1npm install hexo-cli -g blog init 1hexo init blog 여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다. 1command not found: hexo hexo 를 찾을수 없다고 나온다. .bash_profile 에 환경변수 설정을 해보아도 마찬가지. .zshrc">
   
     <link rel="alternate" href="/atom.xml" title="Sunki&#39;s Web Publishing" type="application/atom+xml">
   
@@ -96,18 +96,25 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>어찌어찌 <code>hexo</code> 를 설치해보았다.</p>
-<h3 id="hexo-설치"><a href="#hexo-설치" class="headerlink" title="hexo 설치"></a>hexo 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h3 id="blog-init"><a href="#blog-init" class="headerlink" title="blog init"></a>blog init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure></p>
-<p><code>hexo</code> 를 찾을수 없다고 나온다.<br><code>.bash_profile</code> 에 환경변수 설정을 해보아도 마찬가지.</p>
-<h3 id="zshrc"><a href="#zshrc" class="headerlink" title=".zshrc"></a>.zshrc</h3><p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure></p>
-<p>그래서 아래와 같이 해봤다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure></p>
+<h3>hexo 설치</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3>blog init</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>여기서 문제가 발생해버린다. 다음 내용을 보여주며 안된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> not found: hexo</span><br></pre></td></tr></table></figure>
+<p><code>hexo</code> 를 찾을수 없다고 나온다.<br>
+<code>.bash_profile</code> 에 환경변수 설정을 해보아도 마찬가지.</p>
+<h3>.zshrc</h3>
+<p><code>.zshrc</code> 파일을 열어보니까, 아래와 같은 내용이 보였다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig="mate ~/.zshrc"</span></span><br><span class="line"><span class="comment"># alias ohmyzsh="mate ~/.oh-my-zsh"</span></span><br></pre></td></tr></table></figure>
+<p>그래서 아래와 같이 해봤다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexo=<span class="string">"/Users/&#123;&#123;accouts&#125;&#125;/.npm-global/bin/lib/node_modules/hexo-cli/bin/hexo"</span></span><br></pre></td></tr></table></figure>
 <p>오, 잘된다.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsjnt4gx0003u69y4zbcr7f7" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjsk2xch0000cee9y8rqnig15" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/hexo-cli-path/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -194,10 +201,6 @@
     <h3 class="widget-title">최근 포스트</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2019/02/25/hexo-md/">hexo.md</a>
-          </li>
         
           <li>
             <a href="/2019/02/25/timeago/">timeage.js 사용법</a>
