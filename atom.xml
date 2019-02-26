@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://choisunki.github.io/"/>
-  <updated>2019-02-25T11:18:09.202Z</updated>
+  <updated>2019-02-26T08:13:03.586Z</updated>
   <id>https://choisunki.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SNS 공유하기</title>
+    <link href="https://choisunki.github.io/2019/02/26/sns-share/"/>
+    <id>https://choisunki.github.io/2019/02/26/sns-share/</id>
+    <published>2019-02-26T07:31:11.000Z</published>
+    <updated>2019-02-26T08:13:03.586Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="페이스북-공유"><a href="#페이스북-공유" class="headerlink" title="페이스북 공유"></a>페이스북 공유</h1><h2 id="콜백이-필요-없다면"><a href="#콜백이-필요-없다면" class="headerlink" title="콜백이 필요 없다면"></a>콜백이 필요 없다면</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.facebook.com/sharer/sharer.php?u=domain.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>페이스북 공유<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="콜백이-필요하다면"><a href="#콜백이-필요하다면" class="headerlink" title="콜백이 필요하다면"></a>콜백이 필요하다면</h2><p>페이스북 앱 아이디가 필요한것 같다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#snsFb'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  e.preventDefault();</span><br><span class="line"></span><br><span class="line">  $.ajaxSetup(&#123; <span class="attr">cache</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">  $.getScript(<span class="string">'//connect.facebook.net/ko_KR/sdk.js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    FB.init(&#123;</span><br><span class="line">      appId:<span class="string">'your facebook app id'</span>,</span><br><span class="line">      version: <span class="string">'v3.2'</span></span><br><span class="line">    &#125;);</span><br><span class="line">    FB.ui(&#123;</span><br><span class="line">      method: <span class="string">'share'</span>,</span><br><span class="line">      title: <span class="string">'공유 테스트'</span>,</span><br><span class="line">      description: <span class="string">'공유 테스트를 진행'</span>,</span><br><span class="line">      href: <span class="string">'https://daum.net'</span></span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(response &amp;&amp; !response.error_code) &#123;</span><br><span class="line">        alert(<span class="string">'공유 완료'</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        alert(<span class="string">'공유 실패'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;페이스북-공유&quot;&gt;&lt;a href=&quot;#페이스북-공유&quot; class=&quot;headerlink&quot; title=&quot;페이스북 공유&quot;&gt;&lt;/a&gt;페이스북 공유&lt;/h1&gt;&lt;h2 id=&quot;콜백이-필요-없다면&quot;&gt;&lt;a href=&quot;#콜백이-필요-없다면&quot; class=&quot;head
+      
+    
+    </summary>
+    
+      <category term="sns" scheme="https://choisunki.github.io/categories/sns/"/>
+    
+    
+      <category term="facebook" scheme="https://choisunki.github.io/tags/facebook/"/>
+    
+      <category term="share" scheme="https://choisunki.github.io/tags/share/"/>
+    
+      <category term="fb.ui" scheme="https://choisunki.github.io/tags/fb-ui/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
