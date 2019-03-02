@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://choisunki.github.io/"/>
-  <updated>2019-02-26T08:13:03.586Z</updated>
+  <updated>2019-03-02T10:42:06.859Z</updated>
   <id>https://choisunki.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-fatal-refusing-to-merge-unrelated-histories</title>
+    <link href="https://choisunki.github.io/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/"/>
+    <id>https://choisunki.github.io/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/</id>
+    <published>2019-03-02T10:27:16.000Z</published>
+    <updated>2019-03-02T10:42:06.859Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-pull-시-fatal-refusing-to-merge-unrelated-histories"><a href="#git-pull-시-fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="git pull 시 `fatal: refusing to merge unrelated histories"></a><code>git pull</code> 시 `fatal: refusing to merge unrelated histories</h1><h2 id="상황"><a href="#상황" class="headerlink" title="상황"></a>상황</h2><p><strong>가 PC</strong>에서<br>새로운 저장소(repositories)를 <code>clone</code>하고,<br><code>index.html</code> 을 아래와 같이 생성하여 <code>add</code>, <code>commit</code>, <code>push</code>를 했다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, world</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add index.html</span><br><span class="line">git commit -m <span class="string">"Added index.html"</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure><p><strong>나 PC</strong>에서도 새로운 저장소를 <code>clone</code>하고,<br>폴더를 만들고 예제 파일들을 만들고 있었다.<br>내가 <code>가 PC</code>에서 푸시했다고 <code>나 PC</code>의 <code>SJ</code>님에게 알려줬다.<br><code>나 PC</code>의 <code>SJ</code>님은 <code>git pull</code>을 시도했고,<br>아래와 같이 <code>fatal: refusing to merge unrelated histories</code>라는 문장을 보게 되었고,<br><code>git pull</code>이 완료되지 않았다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">fatal: refusing to merge unrelated histories</span><br></pre></td></tr></table></figure><h2 id="왜-안되는거야"><a href="#왜-안되는거야" class="headerlink" title="왜 안되는거야?"></a>왜 안되는거야?</h2><p>공식적인 이유는 다음과 같다고 한다.</p><blockquote><blockquote><blockquote></blockquote><p>“git merge” used to allow merging two branches that have no common base by default, which led to a brand new history of an existing project created and then get pulled by an unsuspecting maintainer, which allowed an unnecessary parallel history merged into the existing project. The command has been taught not to allow this by default, with an escape hatch “–allow-unrelated-histories” option to be used in a rare event that merges histories of two projects that started their lives independently</p><blockquote></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote></blockquote><p>“git merge”는 기본적으로 공통 기반이없는 두 개의 분기를 병합하여 기존 프로젝트의 새로운 히스토리를 작성한 후 예상치 못한 관리자가 가져온 것으로, 불필요한 병행 이력이 기존 프로젝트에 병합되도록 허용하는 데 사용되었습니다 . 이 명령은 기본적으로 허용하지 않도록 배웠습니다. 독립된 삶을 시작한 두 프로젝트의 기록을 병합하는 드문 이벤트에서 탈출 해치 <code>--allow-unrelated-histories</code> 옵션을 사용할 수 있습니다.</p><blockquote></blockquote></blockquote></blockquote><h2 id="이렇게-하자"><a href="#이렇게-하자" class="headerlink" title="이렇게 하자"></a>이렇게 하자</h2><p>아래와 같이 하면 <code>git pull</code>이 잘 수행된다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin &lt;branch&gt; --allow-unrelated-histories</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;git-pull-시-fatal-refusing-to-merge-unrelated-histories&quot;&gt;&lt;a href=&quot;#git-pull-시-fatal-refusing-to-merge-unrelated-histories&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://choisunki.github.io/categories/git/"/>
+    
+    
+      <category term="error" scheme="https://choisunki.github.io/tags/error/"/>
+    
+      <category term="fatal" scheme="https://choisunki.github.io/tags/fatal/"/>
+    
+  </entry>
   
   <entry>
     <title>SNS 공유하기</title>

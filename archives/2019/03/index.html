@@ -5,20 +5,16 @@
   
 
   
-  <title>timeage.js 사용법 | Sunki&#39;s Web Publishing</title>
+  <title>아카이브: 2019/3 | Sunki&#39;s Web Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="페이스북의 타임라인들을 보노라면, 8분, 4분, 10시간 과 같이 시간을 표시해주는데,timeago 를 사용하면 이를 쉽게 구현해준다. CDN cdnjs https://cdnjs.com/libraries/jquery-timeago  사용법1. 문서에 timeago.js 포함1&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/a">
-<meta name="keywords" content="jquery,plugin,날짜변환">
-<meta property="og:type" content="article">
-<meta property="og:title" content="timeage.js 사용법">
-<meta property="og:url" content="https://choisunki.github.io/2019/02/25/timeago/index.html">
+  <meta name="keywords" content="html,css,js">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunki&#39;s Web Publishing">
+<meta property="og:url" content="https://choisunki.github.io/archives/2019/03/index.html">
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
-<meta property="og:description" content="페이스북의 타임라인들을 보노라면, 8분, 4분, 10시간 과 같이 시간을 표시해주는데,timeago 를 사용하면 이를 쉽게 구현해준다. CDN cdnjs https://cdnjs.com/libraries/jquery-timeago  사용법1. 문서에 timeago.js 포함1&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/a">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-02-25T09:42:49.139Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="timeage.js 사용법">
-<meta name="twitter:description" content="페이스북의 타임라인들을 보노라면, 8분, 4분, 10시간 과 같이 시간을 표시해주는데,timeago 를 사용하면 이를 쉽게 구현해준다. CDN cdnjs https://cdnjs.com/libraries/jquery-timeago  사용법1. 문서에 timeago.js 포함1&amp;lt;script src=&quot;https://cdnjs.cloudflare.com/a">
+<meta name="twitter:title" content="Sunki&#39;s Web Publishing">
   
     <link rel="alternate" href="/atom.xml" title="Sunki&#39;s Web Publishing" type="application/atom+xml">
   
@@ -69,83 +65,41 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-timeago" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/25/timeago/" class="article-date">
-  <time datetime="2019-02-25T01:14:55.000Z" itemprop="datePublished">2019-02-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>►<a class="article-category-link" href="/categories/JavaScript/jquery/">jquery</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      timeage.js 사용법
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/" class="archive-article-date">
+  <time datetime="2019-03-02T10:27:16.000Z" itemprop="datePublished">3월 2</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/">git-fatal-refusing-to-merge-unrelated-histories</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>페이스북의 타임라인들을 보노라면, 8분, 4분, 10시간 과 같이 시간을 표시해주는데,<br><code>timeago</code> 를 사용하면 이를 쉽게 구현해준다.</p>
-<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><ul>
-<li>cdnjs <a href="https://cdnjs.com/libraries/jquery-timeago" target="_blank" rel="noopener">https://cdnjs.com/libraries/jquery-timeago</a></li>
-</ul>
-<h3 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h3><h4 id="1-문서에-timeago-js-포함"><a href="#1-문서에-timeago-js-포함" class="headerlink" title="1. 문서에 timeago.js 포함"></a>1. 문서에 timeago.js 포함</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.5/jquery.timeago.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>한국어로 표현하고 싶다면, localses 의 <code>jquery.timeago.ko.js</code>를 추가로 포함한다.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.5/jquery.timeago.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.5/locales/jquery.timeago.ko.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="2-날짜-넣기"><a href="#2-날짜-넣기" class="headerlink" title="2. 날짜 넣기"></a>2. 날짜 넣기</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 시간은 yyyy-mm-dd hh:ii:ss 형식으로 넣어준다 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">time</span> <span class="attr">class</span>=<span class="string">"tg"</span> <span class="attr">datetime</span>=<span class="string">"&#123;&#123;시간&#125;&#125;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="3-timeago-초기화"><a href="#3-timeago-초기화" class="headerlink" title="3. timeago 초기화"></a>3. timeago 초기화</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">'time.tg'</span>).timeago();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/timeago/" data-id="cjsrcy2gf001ht69yb12yfz3y" class="article-share-link">공유</a>
-      
-        <a href="https://choisunki.github.io/2019/02/25/timeago/#disqus_thread" class="article-comment-link">댓글</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/날짜변환/">날짜변환</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/02/25/select-get-store/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">최신</strong>
-      <div class="article-nav-title">
-        
-          select 도시별 매장정보 출력
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/02/21/hexo-cli-path/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">이전</strong>
-      <div class="article-nav-title">hexo 를 찾을 수 없다!?</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 </section>
         
           <aside id="sidebar">
@@ -244,13 +198,11 @@
 <script>
   var disqus_shortname = 'choisunki';
   
-  var disqus_url = 'https://choisunki.github.io/2019/02/25/timeago/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
