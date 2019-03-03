@@ -67,6 +67,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-gitignore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/03/gitignore/" class="article-date">
+  <time datetime="2019-03-03T09:46:14.000Z" itemprop="datePublished">2019-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/git/">git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/03/gitignore/">.gitignore</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="gitignore-설정"><a href="#gitignore-설정" class="headerlink" title=".gitignore 설정"></a>.gitignore 설정</h2><p>Git에서 커밋 할때에, 불필요한 파일을 숨겨주고 싶었다.<br><code>.gitignore</code> 설정을 하면 된다고 한다.</p>
+<p>그리고, ignore 를 모아놓은곳을 찾았다.</p>
+<ul>
+<li><a href="https://github.com/github/gitignore/tree/master/Global" target="_blank" rel="noopener">github gitignore</a></li>
+</ul>
+<h3 id="맥-MacOs-에서-불필요한-파일-무시-ignore-하기"><a href="#맥-MacOs-에서-불필요한-파일-무시-ignore-하기" class="headerlink" title="맥(MacOs)에서 불필요한 파일 무시(ignore) 하기."></a>맥(MacOs)에서 불필요한 파일 무시(ignore) 하기.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MacOs</span></span><br><span class="line"><span class="comment"># General</span></span><br><span class="line">.DS_Store</span><br><span class="line">.AppleDouble</span><br><span class="line">.LSOverride</span><br><span class="line"></span><br><span class="line"><span class="comment"># Icon must end with two \r</span></span><br><span class="line">Icon</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Thumbnails</span></span><br><span class="line">._*</span><br><span class="line"></span><br><span class="line"><span class="comment"># Files that might appear in the root of a volume</span></span><br><span class="line">.DocumentRevisions-V100</span><br><span class="line">.fseventsd</span><br><span class="line">.Spotlight-V100</span><br><span class="line">.TemporaryItems</span><br><span class="line">.Trashes</span><br><span class="line">.VolumeIcon.icns</span><br><span class="line">.com.apple.timemachine.donotpresent</span><br><span class="line"></span><br><span class="line"><span class="comment"># Directories potentially created on remote AFP share</span></span><br><span class="line">.AppleDB</span><br><span class="line">.AppleDesktop</span><br><span class="line">Network Trash Folder</span><br><span class="line">Temporary Items</span><br><span class="line">.apdisk</span><br></pre></td></tr></table></figure>
+<h3 id="윈도우-Windows-에서-불필요한-파일-무시-ignore-하기"><a href="#윈도우-Windows-에서-불필요한-파일-무시-ignore-하기" class="headerlink" title="윈도우(Windows)에서 불필요한 파일 무시(ignore) 하기."></a>윈도우(Windows)에서 불필요한 파일 무시(ignore) 하기.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Windows</span></span><br><span class="line"><span class="comment"># Windows thumbnail cache files</span></span><br><span class="line">Thumbs.db</span><br><span class="line">ehthumbs.db</span><br><span class="line">ehthumbs_vista.db</span><br><span class="line"></span><br><span class="line"><span class="comment"># Dump file</span></span><br><span class="line">*.stackdump</span><br><span class="line"></span><br><span class="line"><span class="comment"># Folder config file</span></span><br><span class="line">[Dd]esktop.ini</span><br><span class="line"></span><br><span class="line"><span class="comment"># Recycle Bin used on file shares</span></span><br><span class="line"><span class="variable">$RECYCLE</span>.BIN/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows Installer files</span></span><br><span class="line">*.cab</span><br><span class="line">*.msi</span><br><span class="line">*.msix</span><br><span class="line">*.msm</span><br><span class="line">*.msp</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows shortcuts</span></span><br><span class="line">*.lnk</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://choisunki.github.io/2019/03/03/gitignore/" data-id="cjssqnn58000jxz9y3guhg4ae" class="article-share-link">공유</a>
+      
+        <a href="https://choisunki.github.io/2019/03/03/gitignore/#disqus_thread" class="article-comment-link">댓글</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-crlf-will-be-replaced-by-lf" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/02/crlf-will-be-replaced-by-lf/" class="article-date">
@@ -110,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/" data-id="cjssq9grb0006am9yhq13uefj" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/" data-id="cjssqnn53000exz9y14cau5a5" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -179,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/" data-id="cjssq9grd0007am9yjbs97i52" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/" data-id="cjssqnn56000gxz9ybjx6yk2o" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -225,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/26/sns-share/" data-id="cjssq9gri000eam9yteb19640" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/26/sns-share/" data-id="cjssqnn54000fxz9yetj6yj4y" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/26/sns-share/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -274,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/hello-world/" data-id="cjssq9grh000cam9yqpqpqr91" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/hello-world/" data-id="cjssqnn59000kxz9yo9bvhrod" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/hello-world/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -357,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/" data-id="cjssq9gr70002am9y0pd72n35" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/" data-id="cjssqnn50000bxz9yge1z33mp" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/hexo-plugin-codepen2/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -414,7 +465,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/select-get-store/" data-id="cjssq9gr90004am9yhe2o8b8r" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/select-get-store/" data-id="cjssqnn4y000axz9ytbpp9t4w" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/select-get-store/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -466,7 +517,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/25/timeago/" data-id="cjssq9grn000kam9y7dx54brd" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/25/timeago/" data-id="cjssqnn5c000oxz9ykzu5xvxp" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/25/timeago/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -518,7 +569,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjssq9grq000mam9y0trx6mnq" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/hexo-cli-path/" data-id="cjssqnn5b000nxz9y9151beq2" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/hexo-cli-path/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -580,7 +631,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjssq9grm000iam9y7kb92ior" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/02/21/samsung-internet/" data-id="cjssqnn5d000rxz9y20848pc0" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/02/21/samsung-internet/#disqus_thread" class="article-comment-link">댓글</a>
       
@@ -624,7 +675,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">태그 클라우드</h3>
     <div class="widget tagcloud">
-      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angularjs/" style="font-size: 10px;">angularjs</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/codepen/" style="font-size: 10px;">codepen</a> <a href="/tags/cr/" style="font-size: 10px;">cr</a> <a href="/tags/crlf/" style="font-size: 10px;">crlf</a> <a href="/tags/error/" style="font-size: 10px;">error</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/fatal/" style="font-size: 10px;">fatal</a> <a href="/tags/fb-ui/" style="font-size: 10px;">fb.ui</a> <a href="/tags/fullscreen/" style="font-size: 10px;">fullscreen</a> <a href="/tags/galaxy/" style="font-size: 10px;">galaxy</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/issue/" style="font-size: 10px;">issue</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/lf/" style="font-size: 10px;">lf</a> <a href="/tags/mobileweb/" style="font-size: 10px;">mobileweb</a> <a href="/tags/ng-options/" style="font-size: 10px;">ng-options</a> <a href="/tags/ng-repeat/" style="font-size: 10px;">ng-repeat</a> <a href="/tags/notfound/" style="font-size: 10px;">notfound</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/share/" style="font-size: 10px;">share</a> <a href="/tags/warning/" style="font-size: 10px;">warning</a> <a href="/tags/날짜변환/" style="font-size: 10px;">날짜변환</a>
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angularjs/" style="font-size: 10px;">angularjs</a> <a href="/tags/browser/" style="font-size: 10px;">browser</a> <a href="/tags/codepen/" style="font-size: 10px;">codepen</a> <a href="/tags/cr/" style="font-size: 10px;">cr</a> <a href="/tags/crlf/" style="font-size: 10px;">crlf</a> <a href="/tags/error/" style="font-size: 10px;">error</a> <a href="/tags/facebook/" style="font-size: 10px;">facebook</a> <a href="/tags/fatal/" style="font-size: 10px;">fatal</a> <a href="/tags/fb-ui/" style="font-size: 10px;">fb.ui</a> <a href="/tags/fullscreen/" style="font-size: 10px;">fullscreen</a> <a href="/tags/galaxy/" style="font-size: 10px;">galaxy</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/issue/" style="font-size: 10px;">issue</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/lf/" style="font-size: 10px;">lf</a> <a href="/tags/mobileweb/" style="font-size: 10px;">mobileweb</a> <a href="/tags/ng-options/" style="font-size: 10px;">ng-options</a> <a href="/tags/ng-repeat/" style="font-size: 10px;">ng-repeat</a> <a href="/tags/notfound/" style="font-size: 10px;">notfound</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/share/" style="font-size: 10px;">share</a> <a href="/tags/warning/" style="font-size: 10px;">warning</a> <a href="/tags/날짜변환/" style="font-size: 10px;">날짜변환</a>
     </div>
   </div>
 
@@ -646,6 +697,10 @@
       <ul>
         
           <li>
+            <a href="/2019/03/03/gitignore/">.gitignore</a>
+          </li>
+        
+          <li>
             <a href="/2019/03/02/crlf-will-be-replaced-by-lf/">git 새 줄 문자 경고</a>
           </li>
         
@@ -659,10 +714,6 @@
         
           <li>
             <a href="/2019/02/25/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/25/hexo-plugin-codepen2/">hexo 플러그인 hexo-codepen-v2</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="//atom.xml" rel="self"/>
   
   <link href="https://choisunki.github.io/"/>
-  <updated>2019-03-03T09:42:54.920Z</updated>
+  <updated>2019-03-03T09:53:52.153Z</updated>
   <id>https://choisunki.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>.gitignore</title>
+    <link href="https://choisunki.github.io/2019/03/03/gitignore/"/>
+    <id>https://choisunki.github.io/2019/03/03/gitignore/</id>
+    <published>2019-03-03T09:46:14.000Z</published>
+    <updated>2019-03-03T09:53:52.153Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="gitignore-설정"><a href="#gitignore-설정" class="headerlink" title=".gitignore 설정"></a>.gitignore 설정</h2><p>Git에서 커밋 할때에, 불필요한 파일을 숨겨주고 싶었다.<br><code>.gitignore</code> 설정을 하면 된다고 한다.</p><p>그리고, ignore 를 모아놓은곳을 찾았다.</p><ul><li><a href="https://github.com/github/gitignore/tree/master/Global" target="_blank" rel="noopener">github gitignore</a></li></ul><h3 id="맥-MacOs-에서-불필요한-파일-무시-ignore-하기"><a href="#맥-MacOs-에서-불필요한-파일-무시-ignore-하기" class="headerlink" title="맥(MacOs)에서 불필요한 파일 무시(ignore) 하기."></a>맥(MacOs)에서 불필요한 파일 무시(ignore) 하기.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MacOs</span></span><br><span class="line"><span class="comment"># General</span></span><br><span class="line">.DS_Store</span><br><span class="line">.AppleDouble</span><br><span class="line">.LSOverride</span><br><span class="line"></span><br><span class="line"><span class="comment"># Icon must end with two \r</span></span><br><span class="line">Icon</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Thumbnails</span></span><br><span class="line">._*</span><br><span class="line"></span><br><span class="line"><span class="comment"># Files that might appear in the root of a volume</span></span><br><span class="line">.DocumentRevisions-V100</span><br><span class="line">.fseventsd</span><br><span class="line">.Spotlight-V100</span><br><span class="line">.TemporaryItems</span><br><span class="line">.Trashes</span><br><span class="line">.VolumeIcon.icns</span><br><span class="line">.com.apple.timemachine.donotpresent</span><br><span class="line"></span><br><span class="line"><span class="comment"># Directories potentially created on remote AFP share</span></span><br><span class="line">.AppleDB</span><br><span class="line">.AppleDesktop</span><br><span class="line">Network Trash Folder</span><br><span class="line">Temporary Items</span><br><span class="line">.apdisk</span><br></pre></td></tr></table></figure><h3 id="윈도우-Windows-에서-불필요한-파일-무시-ignore-하기"><a href="#윈도우-Windows-에서-불필요한-파일-무시-ignore-하기" class="headerlink" title="윈도우(Windows)에서 불필요한 파일 무시(ignore) 하기."></a>윈도우(Windows)에서 불필요한 파일 무시(ignore) 하기.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Windows</span></span><br><span class="line"><span class="comment"># Windows thumbnail cache files</span></span><br><span class="line">Thumbs.db</span><br><span class="line">ehthumbs.db</span><br><span class="line">ehthumbs_vista.db</span><br><span class="line"></span><br><span class="line"><span class="comment"># Dump file</span></span><br><span class="line">*.stackdump</span><br><span class="line"></span><br><span class="line"><span class="comment"># Folder config file</span></span><br><span class="line">[Dd]esktop.ini</span><br><span class="line"></span><br><span class="line"><span class="comment"># Recycle Bin used on file shares</span></span><br><span class="line"><span class="variable">$RECYCLE</span>.BIN/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows Installer files</span></span><br><span class="line">*.cab</span><br><span class="line">*.msi</span><br><span class="line">*.msix</span><br><span class="line">*.msm</span><br><span class="line">*.msp</span><br><span class="line"></span><br><span class="line"><span class="comment"># Windows shortcuts</span></span><br><span class="line">*.lnk</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;gitignore-설정&quot;&gt;&lt;a href=&quot;#gitignore-설정&quot; class=&quot;headerlink&quot; title=&quot;.gitignore 설정&quot;&gt;&lt;/a&gt;.gitignore 설정&lt;/h2&gt;&lt;p&gt;Git에서 커밋 할때에, 불필요한 파일을 숨겨주고 
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://choisunki.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://choisunki.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>git 새 줄 문자 경고</title>
