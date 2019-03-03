@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
 <meta property="og:description" content="git 에서 git add 를 할 때에 아래의 경고를 만났다.12warning: CRLF will be replaced by LF in index.html.The file will have its original line endings in your working directory. 경고: CRLF 는 index.html 의 LF로 대체됩니다.파일은 작업">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-03-03T09:42:54.920Z">
+<meta property="og:updated_time" content="2019-03-03T09:55:47.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 새 줄 문자 경고">
 <meta name="twitter:description" content="git 에서 git add 를 할 때에 아래의 경고를 만났다.12warning: CRLF will be replaced by LF in index.html.The file will have its original line endings in your working directory. 경고: CRLF 는 index.html 의 LF로 대체됩니다.파일은 작업">
@@ -98,8 +98,46 @@
         <p>git 에서 <code>git add</code> 를 할 때에 아래의 경고를 만났다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">warning: CRLF will be replaced by LF <span class="keyword">in</span> index.html.</span><br><span class="line">The file will have its original line endings <span class="keyword">in</span> your working directory.</span><br></pre></td></tr></table></figure></p>
 <p>경고: CRLF 는 index.html 의 LF로 대체됩니다.<br>파일은 작업 디렉토리에 원래의 줄 끝을 갖습니다.</p>
 <h2 id="CRLF-CR-LF-이게-뭐지"><a href="#CRLF-CR-LF-이게-뭐지" class="headerlink" title="CRLF, CR, LF? 이게 뭐지?"></a><code>CRLF</code>, <code>CR</code>, <code>LF</code>? 이게 뭐지?</h2><p>찾아보니, 윈도우(Windows)는 <code>CR</code>(Carriage Retrun) 과 <code>LF</code>(Line Feed) 문자를 둘 다 사용하지만, <code>Unix</code>, <code>Linux</code>, <code>MacOS</code>는 <code>LF</code> 문자만을 사용한다고 한다.<br>함께 협업하는 인원들이 한 가지 운영체제를 사용한다면 별 문제가 없겠지만, 아닐경우 불편한 문제가 생기는것 같다.<br>실제로 소스코드의 변함이 없는데, 이 문제로 소스코드가 변경되었다고 판단하는 듯 하다.</p>
-<p>더 찾다보니, 위키에서 <strong>새줄 문자</strong>라는걸 찾았는데,<br><code>CRLF</code>, <code>CR</code>, <code>LF</code> 만 있는게 아니었다(오 머리 아파).</p>
-<p><a href="https://ko.wikipedia.org/wiki/%EC%83%88%EC%A4%84_%EB%AC%B8%EC%9E%90" target="_blank" rel="noopener">위키 유니코드의 새줄 문자</a><br>| 구분      | 설명                                         |<br>|——-    |——————————————    |<br>| LF        | 라인 피드(Line Feed), U+000A                 |<br>| FF        | 폼 피드(Form Feed), U+000C                   |<br>| CR        | 캐리지 리턴(Carriage Return), U+000D         |<br>| CR+LF     | 연속된 CR과 LF                               |<br>| NEL       | 다음 줄(Next Line), U+0085                   |<br>| LS        | 줄 구분자(Line Separator), U+2028            |<br>| PS        | 문단 구분자(Paragraph Separator), U+2029     |</p>
+<p>더 찾다보니, 위키에서 <strong>새줄 문자</strong> 라는걸 찾았는데,<br><code>CRLF</code>, <code>CR</code>, <code>LF</code> 만 있는게 아니었다(오 머리 아파).</p>
+<p><a href="https://ko.wikipedia.org/wiki/%EC%83%88%EC%A4%84_%EB%AC%B8%EC%9E%90" target="_blank" rel="noopener">위키 유니코드의 새줄 문자</a></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LF</td>
+<td>라인 피드(Line Feed), U+000A</td>
+</tr>
+<tr>
+<td>FF</td>
+<td>폼 피드(Form Feed), U+000C</td>
+</tr>
+<tr>
+<td>CR</td>
+<td>캐리지 리턴(Carriage Return), U+000D</td>
+</tr>
+<tr>
+<td>CR+LF</td>
+<td>연속된 CR과 LF</td>
+</tr>
+<tr>
+<td>NEL</td>
+<td>다음 줄(Next Line), U+0085</td>
+</tr>
+<tr>
+<td>LS</td>
+<td>줄 구분자(Line Separator), U+2028</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>문단 구분자(Paragraph Separator), U+2029</td>
+</tr>
+</tbody>
+</table>
 <h2 id="경고문제는-어떻게-해결-하면-좋을까"><a href="#경고문제는-어떻게-해결-하면-좋을까" class="headerlink" title="경고문제는 어떻게 해결 하면 좋을까?"></a>경고문제는 어떻게 해결 하면 좋을까?</h2><p>뭐 결국은, 어떻게 해야 할까이고..<br>각각 설정하는 방법도 여기저기서 찾았는데,<br>나는 각 저장소(repository)별로 속성을 지정해서 설정을 강제하는 방법을 사용하기로 했다.<br><em>(같이 협업하는 인원들에게 이건 이렇게 해주시고, 저건 저렇게 해주세요 보다는 훨씬 공수가 덜 들어간다고 생각했다.)</em></p>
 <h3 id="gitattributes-설정"><a href="#gitattributes-설정" class="headerlink" title=".gitattributes 설정"></a><code>.gitattributes</code> 설정</h3><p><code>.gitattributes</code> 파일을 생성하고 아래 내용을 기록한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Auto detect text files and perform LF normalization</span></span><br><span class="line"><span class="comment"># 텍스트 파일 자동 감지 및 LF 정규화 수행</span></span><br><span class="line">*        text=auto</span><br><span class="line"></span><br><span class="line">*.cs     text diff=csharp</span><br><span class="line">*.java   text diff=java</span><br><span class="line">*.html   text diff=html</span><br><span class="line">*.css    text</span><br><span class="line">*.js     text</span><br><span class="line">*.sql    text</span><br><span class="line"></span><br><span class="line">*.csproj text merge=union</span><br><span class="line">*.sln    text merge=union eol=crlf</span><br><span class="line"></span><br><span class="line">*.docx   diff=astextplain</span><br><span class="line">*.DOCX   diff=astextplain</span><br><span class="line"></span><br><span class="line"><span class="comment"># absolute paths are ok, as are globs</span></span><br><span class="line"><span class="comment"># 절대경로는 괜찮다</span></span><br><span class="line">/**/postinst* text eol-lf</span><br><span class="line"></span><br><span class="line"><span class="comment"># paths that don't start with / are treated relative to the .gitattributes folder</span></span><br><span class="line"><span class="comment"># .gitattributes 와 관련하여 /로 시작하지 않는 경로</span></span><br><span class="line">relative/path/*.txt text eol-lf</span><br></pre></td></tr></table></figure></p>
 <h3 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h3><ul>
@@ -112,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/" data-id="cjssqnn53000exz9y14cau5a5" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/" data-id="cjssqq36o000e2i9yujhhocw9" class="article-share-link">공유</a>
       
         <a href="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/#disqus_thread" class="article-comment-link">댓글</a>
       
