@@ -5,20 +5,20 @@
   
 
   
-  <title>git 새 줄 문자 경고 | Sunki&#39;s Web Publishing</title>
+  <title>git-tag | Sunki&#39;s Web Publishing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git 에서 git add 를 할 때에 아래의 경고를 만났다.12warning: CRLF will be replaced by LF in index.html.The file will have its original line endings in your working directory. 경고: CRLF 는 index.html 의 LF로 대체됩니다.파일은 작업">
-<meta name="keywords" content="git,warning,crlf,cr,lf">
+  <meta name="description" content="태그태그라는걸 알게되서 정리해본다.(git-scm 에서 내용들을 훑어 보았고, 그곳의 내용으로 정리해본다.)보통 릴리즈할 때 사용한다고 한다(v1.0, 등등). 태그 조회하기우선 git tag 명령으로 이미 만들어진 태그가 있는지 확인할 수 있다. 12git tagv1.0 이 명령은 알파벳 순서로 태그를 보여준다. 사실 순서는 별로 중요한 게 아니다. 검색">
+<meta name="keywords" content="git,tag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git 새 줄 문자 경고">
-<meta property="og:url" content="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/index.html">
+<meta property="og:title" content="git-tag">
+<meta property="og:url" content="https://choisunki.github.io/2019/03/05/git-tag/index.html">
 <meta property="og:site_name" content="Sunki&#39;s Web Publishing">
-<meta property="og:description" content="git 에서 git add 를 할 때에 아래의 경고를 만났다.12warning: CRLF will be replaced by LF in index.html.The file will have its original line endings in your working directory. 경고: CRLF 는 index.html 의 LF로 대체됩니다.파일은 작업">
+<meta property="og:description" content="태그태그라는걸 알게되서 정리해본다.(git-scm 에서 내용들을 훑어 보았고, 그곳의 내용으로 정리해본다.)보통 릴리즈할 때 사용한다고 한다(v1.0, 등등). 태그 조회하기우선 git tag 명령으로 이미 만들어진 태그가 있는지 확인할 수 있다. 12git tagv1.0 이 명령은 알파벳 순서로 태그를 보여준다. 사실 순서는 별로 중요한 게 아니다. 검색">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-03-03T09:55:47.182Z">
+<meta property="og:updated_time" content="2019-03-05T12:18:52.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 새 줄 문자 경고">
-<meta name="twitter:description" content="git 에서 git add 를 할 때에 아래의 경고를 만났다.12warning: CRLF will be replaced by LF in index.html.The file will have its original line endings in your working directory. 경고: CRLF 는 index.html 의 LF로 대체됩니다.파일은 작업">
+<meta name="twitter:title" content="git-tag">
+<meta name="twitter:description" content="태그태그라는걸 알게되서 정리해본다.(git-scm 에서 내용들을 훑어 보았고, 그곳의 내용으로 정리해본다.)보통 릴리즈할 때 사용한다고 한다(v1.0, 등등). 태그 조회하기우선 git tag 명령으로 이미 만들어진 태그가 있는지 확인할 수 있다. 12git tagv1.0 이 명령은 알파벳 순서로 태그를 보여준다. 사실 순서는 별로 중요한 게 아니다. 검색">
   
     <link rel="alternate" href="/atom.xml" title="Sunki&#39;s Web Publishing" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-crlf-will-be-replaced-by-lf" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git-tag" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/03/02/crlf-will-be-replaced-by-lf/" class="article-date">
-  <time datetime="2019-03-02T10:55:55.000Z" itemprop="datePublished">2019-03-02</time>
+    <a href="/2019/03/05/git-tag/" class="article-date">
+  <time datetime="2019-03-05T11:47:42.000Z" itemprop="datePublished">2019-03-05</time>
 </a>
     
   <div class="article-category">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      git 새 줄 문자 경고
+      git-tag
     </h1>
   
 
@@ -95,67 +95,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>git 에서 <code>git add</code> 를 할 때에 아래의 경고를 만났다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">warning: CRLF will be replaced by LF <span class="keyword">in</span> index.html.</span><br><span class="line">The file will have its original line endings <span class="keyword">in</span> your working directory.</span><br></pre></td></tr></table></figure></p>
-<p>경고: CRLF 는 index.html 의 LF로 대체됩니다.<br>파일은 작업 디렉토리에 원래의 줄 끝을 갖습니다.</p>
-<h2 id="CRLF-CR-LF-이게-뭐지"><a href="#CRLF-CR-LF-이게-뭐지" class="headerlink" title="CRLF, CR, LF? 이게 뭐지?"></a><code>CRLF</code>, <code>CR</code>, <code>LF</code>? 이게 뭐지?</h2><p>찾아보니, 윈도우(Windows)는 <code>CR</code>(Carriage Retrun) 과 <code>LF</code>(Line Feed) 문자를 둘 다 사용하지만, <code>Unix</code>, <code>Linux</code>, <code>MacOS</code>는 <code>LF</code> 문자만을 사용한다고 한다.<br>함께 협업하는 인원들이 한 가지 운영체제를 사용한다면 별 문제가 없겠지만, 아닐경우 불편한 문제가 생기는것 같다.<br>실제로 소스코드의 변함이 없는데, 이 문제로 소스코드가 변경되었다고 판단하는 듯 하다.</p>
-<p>더 찾다보니, 위키에서 <strong>새줄 문자</strong> 라는걸 찾았는데,<br><code>CRLF</code>, <code>CR</code>, <code>LF</code> 만 있는게 아니었다(오 머리 아파).</p>
-<p><a href="https://ko.wikipedia.org/wiki/%EC%83%88%EC%A4%84_%EB%AC%B8%EC%9E%90" target="_blank" rel="noopener">위키 유니코드의 새줄 문자</a></p>
-<table>
-<thead>
-<tr>
-<th>구분</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LF</td>
-<td>라인 피드(Line Feed), U+000A</td>
-</tr>
-<tr>
-<td>FF</td>
-<td>폼 피드(Form Feed), U+000C</td>
-</tr>
-<tr>
-<td>CR</td>
-<td>캐리지 리턴(Carriage Return), U+000D</td>
-</tr>
-<tr>
-<td>CR+LF</td>
-<td>연속된 CR과 LF</td>
-</tr>
-<tr>
-<td>NEL</td>
-<td>다음 줄(Next Line), U+0085</td>
-</tr>
-<tr>
-<td>LS</td>
-<td>줄 구분자(Line Separator), U+2028</td>
-</tr>
-<tr>
-<td>PS</td>
-<td>문단 구분자(Paragraph Separator), U+2029</td>
-</tr>
-</tbody>
-</table>
-<h2 id="경고문제는-어떻게-해결-하면-좋을까"><a href="#경고문제는-어떻게-해결-하면-좋을까" class="headerlink" title="경고문제는 어떻게 해결 하면 좋을까?"></a>경고문제는 어떻게 해결 하면 좋을까?</h2><p>뭐 결국은, 어떻게 해야 할까이고..<br>각각 설정하는 방법도 여기저기서 찾았는데,<br>나는 각 저장소(repository)별로 속성을 지정해서 설정을 강제하는 방법을 사용하기로 했다.<br><em>(같이 협업하는 인원들에게 이건 이렇게 해주시고, 저건 저렇게 해주세요 보다는 훨씬 공수가 덜 들어간다고 생각했다.)</em></p>
-<h3 id="gitattributes-설정"><a href="#gitattributes-설정" class="headerlink" title=".gitattributes 설정"></a><code>.gitattributes</code> 설정</h3><p><code>.gitattributes</code> 파일을 생성하고 아래 내용을 기록한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Auto detect text files and perform LF normalization</span></span><br><span class="line"><span class="comment"># 텍스트 파일 자동 감지 및 LF 정규화 수행</span></span><br><span class="line">*        text=auto</span><br><span class="line"></span><br><span class="line">*.cs     text diff=csharp</span><br><span class="line">*.java   text diff=java</span><br><span class="line">*.html   text diff=html</span><br><span class="line">*.css    text</span><br><span class="line">*.js     text</span><br><span class="line">*.sql    text</span><br><span class="line"></span><br><span class="line">*.csproj text merge=union</span><br><span class="line">*.sln    text merge=union eol=crlf</span><br><span class="line"></span><br><span class="line">*.docx   diff=astextplain</span><br><span class="line">*.DOCX   diff=astextplain</span><br><span class="line"></span><br><span class="line"><span class="comment"># absolute paths are ok, as are globs</span></span><br><span class="line"><span class="comment"># 절대경로는 괜찮다</span></span><br><span class="line">/**/postinst* text eol-lf</span><br><span class="line"></span><br><span class="line"><span class="comment"># paths that don't start with / are treated relative to the .gitattributes folder</span></span><br><span class="line"><span class="comment"># .gitattributes 와 관련하여 /로 시작하지 않는 경로</span></span><br><span class="line">relative/path/*.txt text eol-lf</span><br></pre></td></tr></table></figure></p>
-<h3 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h3><ul>
-<li><a href="https://reiphiel.tistory.com/tag/.gitattributes" target="_blank" rel="noopener">레이피엘의 블로그 Git을 이용한 개행문자 핸들링</a></li>
-<li><a href="https://handam.tistory.com/127" target="_blank" rel="noopener">handam Git 설정 CRLF, LF</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%83%88%EC%A4%84_%EB%AC%B8%EC%9E%90" target="_blank" rel="noopener">WIKI 새줄 문자</a></li>
-<li><a href="https://riptutorial.com/ko/git/topic/1269/-gitattributes-%ED%8C%8C%EC%9D%BC-%EC%82%AC%EC%9A%A9" target="_blank" rel="noopener">RIP TUTORIAL .gitattributes 파일 사용</a></li>
-</ul>
+        <h2 id="태그"><a href="#태그" class="headerlink" title="태그"></a>태그</h2><p>태그라는걸 알게되서 정리해본다.<br>(<a href="https://git-scm.com/book/ko/v1/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%ED%83%9C%EA%B7%B8" target="_blank" rel="noopener">git-scm</a> 에서 내용들을 훑어 보았고, 그곳의 내용으로 정리해본다.)<br>보통 릴리즈할 때 사용한다고 한다(v1.0, 등등).</p>
+<h3 id="태그-조회하기"><a href="#태그-조회하기" class="headerlink" title="태그 조회하기"></a>태그 조회하기</h3><p>우선 <code>git tag</code> 명령으로 이미 만들어진 태그가 있는지 확인할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br><span class="line">v1.0</span><br></pre></td></tr></table></figure>
+<p>이 명령은 알파벳 순서로 태그를 보여준다. 사실 순서는 별로 중요한 게 아니다.</p>
+<p>검색 패턴을 사용하여 태그를 검색할 수 있다. Git 소스 저장소는 240여 개의 태그가 있다. 만약 1.4.2 버전의 태그들만 검색하고 싶으면 아래와 같이 실행한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git tag -l <span class="string">'v1.4.2.*'</span></span><br><span class="line">v1.4.2.1</span><br><span class="line">v1.4.2.2</span><br><span class="line">v1.4.2.3</span><br><span class="line">v1.4.2.4</span><br></pre></td></tr></table></figure>
+<h3 id="태그-붙히기"><a href="#태그-붙히기" class="headerlink" title="태그 붙히기"></a>태그 붙히기</h3><p>Git의 태그는 Lightweight 태그와 Annotated 태그, 두 종류가 있다. Lightweight 태그는 브랜치와 비슷한데 브랜치처럼 가리키는 지점을 치신 커밋으로 이동시키지 않는다.</p>
+<p>단순히 특정 커밋에 대한 포인터일 뿐이다.</p>
+<p>한편, Annotated 태그는 Git 데이터베이스에 태그를 만든 사람의 이름, 이메일과 태그를 만든 날짜, 그리고 태그 메시지도 저장한다. 또 GPG(GNU Privacy Guard)로 서명할 수도 있다.</p>
+<p>이 모든 정보를 저장해둬야 할 때에만 Annotated 태그를 추천한다.</p>
+<p>그냥 다른 정보를 저장하지 않는 단순한 태그가 필요하다면 Lightweight 태그를 사용하는것이 좋다.</p>
+<h3 id="Annotated-주석-주해-이-달린-태그"><a href="#Annotated-주석-주해-이-달린-태그" class="headerlink" title="Annotated(주석[주해]이 달린) 태그"></a>Annotated(주석[주해]이 달린) 태그</h3><p><code>Annotated</code> 태그를 만드는 방법은 간단하다. <code>tag</code> 명령을 실행할 때 <code>-a</code> 옵션을 추가한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag -a v1.0 -m <span class="string">"version 1.0"</span></span><br><span class="line">git tag</span><br><span class="line">v1.0</span><br></pre></td></tr></table></figure></p>
+<p><code>-m</code> 옵션으로 태그를 저장할 때 메시지를 함께 저장할 수 있다. 명령을 실행할 때 메시지를 이볅하지 않으면 Git은 편집기를 실행시킨다.</p>
+<p><code>git show</code> 명령으로 태그 정보와 커밋 정보를 모두 확인 할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git show v1.0</span><br><span class="line">tag v1.0</span><br><span class="line">Tagger: choi sunki &lt;iru@nate.com&gt;</span><br><span class="line">Date:   Tue Mar 5 20:46:39 2019 +0900</span><br><span class="line"></span><br><span class="line">version 1.0</span><br><span class="line"></span><br><span class="line">commit 50ef865abd4bc3fbab66c1e7d4330f6188fcc601 (HEAD -&gt; master, tag: v1.0, origin/master)</span><br><span class="line">Author: choi sunki &lt;iru@nate.com&gt;</span><br><span class="line">Date:   Tue Mar 5 19:30:42 2019 +0900</span><br></pre></td></tr></table></figure>
+<p>커밋 정보를 보여주기 전에 먼저 태그를 만든사람이 누구인지, 언제 태그를 만들었는지, 그리고 태그 메시지가 무엇인지 보여준다.</p>
+<h3 id="태그-공유하기"><a href="#태그-공유하기" class="headerlink" title="태그 공유하기"></a>태그 공유하기</h3><p><code>git push</code> 명령은 자동으로 리모트 서버에 태그를 전송하지 않는다. 태그를 만들었으면 서버에 별도로 Push 해야 한다. 브랜치를 공유하는 것과 같은 방법으로 할 수 있다.</p>
+<p><code>git push origin [태그 이름]</code>을 실행한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git push origin v1.5</span><br><span class="line">Counting objects: 50, <span class="keyword">done</span>.</span><br><span class="line">Compressing objects: 100% (38/38), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (44/44), 4.56 KiB, <span class="keyword">done</span>.</span><br><span class="line">Total 44 (delta 18), reused 8 (delta 1)</span><br><span class="line">To git@github.com:schacon/simplegit.git</span><br><span class="line">* [new tag]         v1.5 -&gt; v1.5</span><br></pre></td></tr></table></figure></p>
+<p>만약 한 번에 태그를 여러게 Push 하고 싶으면 <code>--tags</code> 옵션을 추가하여 <code>git push</code> 명령을 실행한다. 이 명령으로 리모트 서버에 없는 태그를 모두 전송할 수 있다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br><span class="line">Counting objects: 50, <span class="keyword">done</span>.</span><br><span class="line">Compressing objects: 100% (38/38), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (44/44), 4.56 KiB, <span class="keyword">done</span>.</span><br><span class="line">Total 44 (delta 18), reused 8 (delta 1)</span><br><span class="line">To git@github.com:schacon/simplegit.git</span><br><span class="line"> * [new tag]         v0.1 -&gt; v0.1</span><br><span class="line"> * [new tag]         v1.2 -&gt; v1.2</span><br><span class="line"> * [new tag]         v1.4 -&gt; v1.4</span><br><span class="line"> * [new tag]         v1.4-lw -&gt; v1.4-lw</span><br><span class="line"> * [new tag]         v1.5 -&gt; v1.5</span><br></pre></td></tr></table></figure></p>
+<p>누군가 저장소에서 Clone 하거나 Pull 을 하면 모든 태그 정보도 함께 전송된다.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/" data-id="cjsvqq6wm000kue9yv0jc4e2u" class="article-share-link">공유</a>
+      <a data-url="https://choisunki.github.io/2019/03/05/git-tag/" data-id="cjsvqq6wf000cue9yrb3trz1d" class="article-share-link">공유</a>
       
-        <a href="https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/#disqus_thread" class="article-comment-link">댓글</a>
+        <a href="https://choisunki.github.io/2019/03/05/git-tag/#disqus_thread" class="article-comment-link">댓글</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cr/">cr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crlf/">crlf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lf/">lf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/warning/">warning</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tag/">tag</a></li></ul>
 
     </footer>
   </div>
@@ -163,19 +132,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/03/gitignore/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">최신</strong>
-      <div class="article-nav-title">
-        
-          .gitignore
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/02/git-fatal-refusing-to-merge-unrelated-histories/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/03/03/gitignore/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">이전</strong>
-      <div class="article-nav-title">git-fatal-refusing-to-merge-unrelated-histories</div>
+      <div class="article-nav-title">.gitignore</div>
     </a>
   
 </nav>
@@ -287,7 +247,7 @@
 <script>
   var disqus_shortname = 'choisunki';
   
-  var disqus_url = 'https://choisunki.github.io/2019/03/02/crlf-will-be-replaced-by-lf/';
+  var disqus_url = 'https://choisunki.github.io/2019/03/05/git-tag/';
   
   (function(){
     var dsq = document.createElement('script');
